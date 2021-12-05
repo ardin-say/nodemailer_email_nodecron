@@ -8,7 +8,7 @@ const config = require('./config.js')
 const OAuth2 = google.auth.OAuth2
 const cron = require('node-cron');
 
-cron.schedule('30 * * * * *', () => {
+cron.schedule('1 * * * * *', () => {
 
 const OAuth2_client = new OAuth2(config.clientId, config.clientSecret)
 OAuth2_client.setCredentials( { refresh_token : config.refreshToken } )
